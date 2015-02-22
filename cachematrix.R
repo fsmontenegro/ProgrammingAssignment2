@@ -1,5 +1,13 @@
+## cachematrix.R
+## JHU's Data Specialization - R Programming - Programming Assignment 2
+## Feb 22, 2015
+## Fernando Montenegro (fsmontenegro@gmail.com)
 ## This pair of functions provides a way to cache matrix inverse results.
 ## It does so by leveraging the lexical scoping rules.
+## Usage (assume 'a' is an invertible matrix):
+##    > x <- makeCacheMatrix(a)
+##    > cacheSolve(x)
+## If needed, can use x$get() to extract current value of x
 
 ## The makeCacheMatrix functions creates the actual cache. It creates a list with functions to
 ## get and set the matrix, as well as functions getsolve (to obtain the inverse) and setsolve
